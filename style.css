@@ -1,0 +1,124 @@
+:root {
+    --bg-content-color: #a10037;
+}
+
+body {
+    background: #EEEEEE;
+    overflow-x: hidden;
+}
+.navbar_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bgcolor {
+    background: var(--bg-content-color);
+}
+#topnavBtn {
+    display: none;
+}
+.nav_link {
+    display: flex;
+}
+.nav_link a {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 10px;
+}
+.nav_link a:hover {
+    text-decoration: underline;
+}
+.search_input, .search_btn {
+    border: none;
+    outline: none;
+    padding: 3px 12px;
+}
+.search_btn  {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.secound_search {
+    display: none;
+}
+.category_container {
+    padding: 0;
+    text-align: center;
+}
+.category_container > a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 5px 5px;
+    background: var(--bg-content-color);
+    padding: 4px 15px 6px;
+    font-weight: 500;
+}
+.category-name {
+    margin-top: 0;
+    font-size: 17px;
+    padding: 8px 10px 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    background: var(--bg-content-color);
+}
+.movie_thumbnail img {
+    border: 1px solid #EEEEEE;
+    transition: 0.3s;
+}
+.movie_thumbnail img:hover {
+    scale: 1.1;
+}
+.thumbnail-wraper {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.movie-images {
+    width: 100%;
+    min-width: 70px;
+    height: 287px;
+}
+.thumbnail-wraper-text {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
+    color: #fff;
+}
+.footer {
+  background: var(--bg-content-color);
+}
+@media screen and (max-width: 1200px) {
+    .hideInput {
+        display: none;
+    }
+    .secound_search.showSearch {
+        display: flex;
+    }
+    .search_btn  {
+        border: 2px solid #fff;
+    }
+}
+@media screen and (max-width: 992px) {
+    .nav_link {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: #e6e4e4;
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav_link.show_nav {
+        display: flex;
+    }
+    .nav_link a {
+        padding: 4px 0;
+        color: #111;
+        padding: 8px 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    #topnavBtn {
+        display: block;
+    }
+}
